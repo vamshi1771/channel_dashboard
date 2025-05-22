@@ -91,13 +91,14 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-4 font-sans text-gray-800">
       {/* Header */}
-      <header className="mb-8 text-center">
+       <header className="mb-8 text-center">
         <h1 className="text-5xl font-extrabold text-blue-800 tracking-tight leading-tight">
-          <span className="block text-blue-600 text-3xl mb-1">E-commerce Logistics</span>
+          <span className="block text-blue-600 text-3xl mb-1">Myntra Outbound</span>
           Post-Order Notification Health Dashboard
         </h1>
         <p className="text-xl text-gray-600 mt-2">Monitor and optimize your customer communication</p>
       </header>
+
 
       {/* Filters Panel */}
       <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-blue-100">
