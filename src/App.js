@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+
 import React, { useState, useEffect } from 'react';
 
 // Main App Component
@@ -88,21 +89,25 @@ const App = () => {
       );
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 font-inter">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-4 font-sans text-gray-800">
       {/* Header */}
-      <header className="mb-6">
-        <h1 className="text-4xl font-bold text-gray-800 text-center">Post-Order Notification Health Dashboard</h1>
+      <header className="mb-8 text-center">
+        <h1 className="text-5xl font-extrabold text-blue-800 tracking-tight leading-tight">
+          <span className="block text-blue-600 text-3xl mb-1">E-commerce Logistics</span>
+          Post-Order Notification Health Dashboard
+        </h1>
+        <p className="text-xl text-gray-600 mt-2">Monitor and optimize your customer communication</p>
       </header>
 
       {/* Filters Panel */}
-      <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Filters</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+      <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-blue-100">
+        <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Refine Your View</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
           <div>
-            <label htmlFor="dateRange" className="block text-sm font-medium text-gray-700">Date Range</label>
+            <label htmlFor="dateRange" className="block text-sm font-medium text-gray-700 mb-1">Date Range</label>
             <select
               id="dateRange"
-              className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm"
+              className="mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm transition duration-200 ease-in-out hover:border-blue-400"
               value={dateRange}
               onChange={(e) => setDateRange(e.target.value)}
             >
@@ -113,10 +118,10 @@ const App = () => {
             </select>
           </div>
           <div>
-            <label htmlFor="channelFilter" className="block text-sm font-medium text-gray-700">Channel</label>
+            <label htmlFor="channelFilter" className="block text-sm font-medium text-gray-700 mb-1">Channel</label>
             <select
               id="channelFilter"
-              className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm"
+              className="mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm transition duration-200 ease-in-out hover:border-blue-400"
               value={channelFilter}
               onChange={(e) => setChannelFilter(e.target.value)}
             >
@@ -129,10 +134,10 @@ const App = () => {
             </select>
           </div>
           <div>
-            <label htmlFor="eventTypeFilter" className="block text-sm font-medium text-gray-700">Event Type</label>
+            <label htmlFor="eventTypeFilter" className="block text-sm font-medium text-gray-700 mb-1">Event Type</label>
             <select
               id="eventTypeFilter"
-              className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm"
+              className="mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm transition duration-200 ease-in-out hover:border-blue-400"
               value={eventTypeFilter}
               onChange={(e) => setEventTypeFilter(e.target.value)}
             >
@@ -148,10 +153,10 @@ const App = () => {
             </select>
           </div>
           <div>
-            <label htmlFor="devicePlatform" className="block text-sm font-medium text-gray-700">Device/Platform</label>
+            <label htmlFor="devicePlatform" className="block text-sm font-medium text-gray-700 mb-1">Device/Platform</label>
             <select
               id="devicePlatform"
-              className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm"
+              className="mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm transition duration-200 ease-in-out hover:border-blue-400"
               value={devicePlatform}
               onChange={(e) => setDevicePlatform(e.target.value)}
             >
@@ -162,10 +167,10 @@ const App = () => {
             </select>
           </div>
           <div>
-            <label htmlFor="demographics" className="block text-sm font-medium text-gray-700">Demographics</label>
+            <label htmlFor="demographics" className="block text-sm font-medium text-gray-700 mb-1">Demographics</label>
             <select
               id="demographics"
-              className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm"
+              className="mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm transition duration-200 ease-in-out hover:border-blue-400"
               value={demographics}
               onChange={(e) => setDemographics(e.target.value)}
             >
@@ -176,10 +181,10 @@ const App = () => {
             </select>
           </div>
           <div>
-            <label htmlFor="orderValueTier" className="block text-sm font-medium text-gray-700">Order Value Tier</label>
+            <label htmlFor="orderValueTier" className="block text-sm font-medium text-gray-700 mb-1">Order Value Tier</label>
             <select
               id="orderValueTier"
-              className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm"
+              className="mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm transition duration-200 ease-in-out hover:border-blue-400"
               value={orderValueTier}
               onChange={(e) => setOrderValueTier(e.target.value)}
             >
@@ -220,92 +225,131 @@ const App = () => {
 
 // Component for Overall Notification Health Summary
 const OverallHealthSummary = ({ data }) => (
-  <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Overall Notification Health Summary</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
-      <MetricCard title="Total Notifications Sent" value={data.totalNotificationsSent.toLocaleString()} />
-      <MetricCard title="Successful Deliveries" value={`${data.successfulDeliveries.count.toLocaleString()} (${data.successfulDeliveries.percentage}%)`} />
-      <MetricCard title="Failed Deliveries" value={`${data.failedDeliveries.count.toLocaleString()} (${data.failedDeliveries.percentage}%)`} />
-      <MetricCard title="Avg. Time to Trigger" value={data.avgTimeToTrigger} />
-      <MetricCard title="Avg. Time to Delivery" value={data.avgTimeToDelivery} />
-      <MetricCard title="Customer Reach Rate" value={`${data.customerReachRate}%`} />
+  <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-green-100">
+    <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Overall Notification Health Summary</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+      <MetricCard title="Total Notifications Sent" value={data.totalNotificationsSent.toLocaleString()} color="blue" />
+      <MetricCard title="Successful Deliveries" value={`${data.successfulDeliveries.count.toLocaleString()} (${data.successfulDeliveries.percentage}%)`} color="green" />
+      <MetricCard title="Failed Deliveries" value={`${data.failedDeliveries.count.toLocaleString()} (${data.failedDeliveries.percentage}%)`} color="red" />
+      <MetricCard title="Avg. Time to Trigger" value={data.avgTimeToTrigger} color="purple" />
+      <MetricCard title="Avg. Time to Delivery" value={data.avgTimeToDelivery} color="orange" />
+      <MetricCard title="Customer Reach Rate" value={`${data.customerReachRate}%`} color="teal" />
     </div>
   </section>
 );
 
 // Reusable Metric Card Component
-const MetricCard = ({ title, value }) => (
-  <div className="bg-blue-50 p-4 rounded-lg shadow-sm border border-blue-100 flex flex-col justify-between">
-    <h3 className="text-lg font-medium text-blue-800 mb-2">{title}</h3>
-    <p className="text-3xl font-bold text-blue-600">{value}</p>
-  </div>
-);
+const MetricCard = ({ title, value, color }) => {
+  const bgColor = {
+    blue: 'bg-blue-50',
+    green: 'bg-green-50',
+    red: 'bg-red-50',
+    purple: 'bg-purple-50',
+    orange: 'bg-orange-50',
+    teal: 'bg-teal-50',
+  }[color];
+
+  const textColor = {
+    blue: 'text-blue-800',
+    green: 'text-green-800',
+    red: 'text-red-800',
+    purple: 'text-purple-800',
+    orange: 'text-orange-800',
+    teal: 'text-teal-800',
+  }[color];
+
+  const borderColor = {
+    blue: 'border-blue-200',
+    green: 'border-green-200',
+    red: 'border-red-200',
+    purple: 'border-purple-200',
+    orange: 'border-orange-200',
+    teal: 'border-teal-200',
+  }[color];
+
+  const valueColor = {
+    blue: 'text-blue-600',
+    green: 'text-green-600',
+    red: 'text-red-600',
+    purple: 'text-purple-600',
+    orange: 'text-orange-600',
+    teal: 'text-teal-600',
+  }[color];
+
+
+  return (
+    <div className={`${bgColor} p-5 rounded-xl shadow-md border ${borderColor} flex flex-col justify-between transform transition-transform duration-300 hover:scale-105`}>
+      <h3 className={`text-lg font-semibold ${textColor} mb-2`}>{title}</h3>
+      <p className={`text-4xl font-extrabold ${valueColor}`}>{value}</p>
+    </div>
+  );
+};
 
 // Component for Channel-Wise Metrics
 const ChannelMetrics = ({ data }) => (
-  <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Channel-Wise Metrics</h2>
+  <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-purple-100">
+    <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Channel-Wise Performance</h2>
     <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden">
-        <thead className="bg-gray-50">
+      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <thead className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
           <tr>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Channel</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sent</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Delivered</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Open Rate</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CTR</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bounce Rate</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Opt-out Rate</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Avg. Delivery Time</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Channel</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Sent</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Delivered</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Open Rate</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">CTR</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Bounce Rate</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Opt-out Rate</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Avg. Delivery Time</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row) => (
-            <tr key={row.channel}>
-              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{row.channel}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.sent.toLocaleString()}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.delivered.toLocaleString()}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.openRate}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.ctr}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.bounceRate}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.optOutRate}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.avgDeliveryTime}</td>
+            <tr key={row.channel} className="hover:bg-gray-50 transition duration-150 ease-in-out">
+              <td className="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">{row.channel}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.sent.toLocaleString()}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.delivered.toLocaleString()}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.openRate}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.ctr}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.bounceRate}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.optOutRate}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.avgDeliveryTime}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-    <p className="text-sm text-gray-600 mt-4">Note: Trend views for these KPIs would typically be displayed using line charts over time.</p>
+    <p className="text-sm text-gray-600 mt-6 italic">Note: Trend views for these KPIs would typically be displayed using interactive line charts over time for deeper analysis.</p>
   </section>
 );
 
 // Component for Event-wise Notification Metrics
 const EventMetrics = ({ data }) => (
-  <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Event-wise Notification Metrics</h2>
+  <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-teal-100">
+    <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Event-Wise Notification Metrics</h2>
     <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden">
-        <thead className="bg-gray-50">
+      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <thead className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white">
           <tr>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Event Type</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sent</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Delivered</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Open Rate</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Avg. Delay</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Failed %</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CTR</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Event Type</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Sent</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Delivered</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Open Rate</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Avg. Delay</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Failed %</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">CTR</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row) => (
-            <tr key={row.eventType}>
-              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{row.eventType}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.sent.toLocaleString()}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.delivered.toLocaleString()}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.openRate}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.avgDelay}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.failedPercentage}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.ctr}</td>
+            <tr key={row.eventType} className="hover:bg-gray-50 transition duration-150 ease-in-out">
+              <td className="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">{row.eventType}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.sent.toLocaleString()}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.delivered.toLocaleString()}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.openRate}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.avgDelay}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.failedPercentage}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.ctr}</td>
             </tr>
           ))}
         </tbody>
@@ -316,22 +360,23 @@ const EventMetrics = ({ data }) => (
 
 // Component for Funnel View
 const FunnelView = ({ data }) => (
-  <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Funnel View: Order Journey vs Notification Delivery</h2>
-    <div className="flex flex-col items-center space-y-4">
+  <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-orange-100">
+    <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Funnel View: Order Journey vs Notification Delivery</h2>
+    <div className="flex flex-col items-center space-y-5 py-4">
       {data.map((stage, index) => (
         <React.Fragment key={stage.stage}>
-          <div className="flex items-center w-full max-w-md">
-            <div className={`flex-grow text-right pr-4 ${stage.flag ? 'text-red-600 font-bold' : 'text-gray-800'}`}>
+          <div className="flex items-center w-full max-w-2xl px-4">
+            <div className={`flex-grow text-right pr-6 text-lg font-medium ${stage.flag ? 'text-red-600' : 'text-gray-800'}`}>
               {stage.stage} {stage.percentage < 100 ? `(${stage.percentage}% sent)` : ''}
             </div>
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+            <div className={`w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full text-white font-bold text-xl shadow-lg
+              ${stage.flag ? 'bg-red-500 ring-4 ring-red-200' : 'bg-blue-500 ring-4 ring-blue-200'}`}>
               {index + 1}
             </div>
-            <div className="flex-grow text-left pl-4">
+            <div className="flex-grow text-left pl-6">
               {stage.flag && (
-                <span className="text-red-500 text-sm ml-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline-block mr-1" viewBox="0 0 20 20" fill="currentColor">
+                <span className="text-red-500 text-sm font-semibold flex items-center bg-red-50 px-3 py-1 rounded-full shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline-block mr-1 text-red-600" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M8.257 3.345a.75.75 0 011.486 0l3.085 6.17a.75.75 0 01-.154.787l-3.085 3.085a.75.75 0 01-1.06 0l-3.085-3.085a.75.75 0 01-.154-.787l3.085-6.17z" clipRule="evenodd" />
                   </svg>
                   {stage.insight}
@@ -340,12 +385,12 @@ const FunnelView = ({ data }) => (
             </div>
           </div>
           {index < data.length - 1 && (
-            <div className="w-0.5 h-8 bg-gray-300"></div>
+            <div className={`w-1 h-12 ${data[index].flag ? 'bg-red-300' : 'bg-gray-300'} rounded-full`}></div>
           )}
         </React.Fragment>
       ))}
-      <div className="text-blue-600 font-semibold mt-2">
-        (Click Rate 30%) - Example for Shipped stage
+      <div className="text-blue-600 font-semibold text-lg mt-4 px-4 py-2 bg-blue-50 rounded-lg shadow-inner">
+        (Example: Click Rate for Shipped stage: 30%)
       </div>
     </div>
   </section>
@@ -353,21 +398,21 @@ const FunnelView = ({ data }) => (
 
 // Component for Customer Engagement Metrics
 const CustomerEngagement = ({ data }) => (
-  <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Customer Engagement Metrics</h2>
+  <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-pink-100">
+    <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Customer Engagement Insights</h2>
     <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden">
-        <thead className="bg-gray-50">
+      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <thead className="bg-gradient-to-r from-pink-500 to-rose-600 text-white">
           <tr>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metric</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sample Insight</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Metric</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Key Insight</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row) => (
-            <tr key={row.metric}>
-              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{row.metric}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.insight}</td>
+            <tr key={row.metric} className="hover:bg-gray-50 transition duration-150 ease-in-out">
+              <td className="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">{row.metric}</td>
+              <td className="px-6 py-4 whitespace-pre-wrap text-sm text-gray-700">{row.insight}</td>
             </tr>
           ))}
         </tbody>
@@ -378,25 +423,25 @@ const CustomerEngagement = ({ data }) => (
 
 // Component for Errors and Exceptions Monitor
 const ErrorsMonitor = ({ data }) => (
-  <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Errors and Exceptions Monitor</h2>
+  <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-red-100">
+    <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Errors and Exceptions Monitor</h2>
     <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden">
-        <thead className="bg-gray-50">
+      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <thead className="bg-gradient-to-r from-red-500 to-rose-700 text-white">
           <tr>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Error Type</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Count</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Channel</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Occurrence</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Error Type</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Count</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Channel</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Last Occurrence</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row) => (
-            <tr key={row.errorType}>
-              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{row.errorType}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.count.toLocaleString()}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.channel}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.lastOccurrence}</td>
+            <tr key={row.errorType} className="hover:bg-red-50 transition duration-150 ease-in-out">
+              <td className="px-6 py-4 whitespace-nowrap text-base font-medium text-red-700">{row.errorType}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.count.toLocaleString()}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.channel}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.lastOccurrence}</td>
             </tr>
           ))}
         </tbody>
@@ -407,29 +452,29 @@ const ErrorsMonitor = ({ data }) => (
 
 // Component for A/B Test Panel
 const ABTestPanel = ({ data }) => (
-  <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-    <h2 className="text-2xl font-semibold text-gray-700 mb-4">A/B Test Panel</h2>
+  <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-yellow-100">
+    <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">A/B Test Performance</h2>
     <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden">
-        <thead className="bg-gray-50">
+      <table className="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <thead className="bg-gradient-to-r from-yellow-500 to-orange-600 text-white">
           <tr>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Test Name</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Channel</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Event</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Variant A CTR</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Variant B CTR</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Winner</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Test Name</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Channel</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Event</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Variant A CTR</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Variant B CTR</th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider">Winner</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row) => (
-            <tr key={row.testName}>
-              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{row.testName}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.channel}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.event}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.variantACTR}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.variantBCTR}</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{row.winner}</td>
+            <tr key={row.testName} className="hover:bg-gray-50 transition duration-150 ease-in-out">
+              <td className="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">{row.testName}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.channel}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.event}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.variantACTR}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.variantBCTR}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600">{row.winner}</td>
             </tr>
           ))}
         </tbody>
@@ -440,13 +485,15 @@ const ABTestPanel = ({ data }) => (
 
 // Component for Recommendations & Anomalies
 const Recommendations = ({ recommendations }) => (
-  <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Recommendations & Anomalies</h2>
-    <ul className="list-disc list-inside space-y-2 text-gray-700">
+  <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-green-100">
+    <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Recommendations & Actionable Insights</h2>
+    <ul className="list-none space-y-4 text-gray-700">
       {recommendations.map((rec, index) => (
-        <li key={index} className="flex items-start">
-          <span className="text-blue-500 mr-2">&#x2022;</span> {/* Unicode bullet point */}
-          <span>{rec}</span>
+        <li key={index} className="flex items-start bg-blue-50 p-4 rounded-lg shadow-sm border border-blue-200 hover:bg-blue-100 transition duration-200 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500 flex-shrink-0 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span className="text-base leading-relaxed">{rec}</span>
         </li>
       ))}
     </ul>
