@@ -68,7 +68,6 @@ const App = () => {
     'Consider A/B testing push notification copy for "Order Shipped" event to improve CTR.',
   ];
 
-  // State for filters
   const [dateRange, setDateRange] = useState('Last 7 Days');
   const [channelFilter, setChannelFilter] = useState('All');
   const [eventTypeFilter, setEventTypeFilter] = useState('All');
@@ -286,7 +285,6 @@ const MetricCard = ({ title, value, color }) => {
   );
 };
 
-// Component for Channel-Wise Metrics
 const ChannelMetrics = ({ data }) => (
   <section className="bg-white p-6 rounded-2xl shadow-xl mb-8 border border-purple-100">
     <h2 className="text-2xl font-bold text-gray-700 mb-5 border-b pb-3 border-gray-200">Channel-Wise Performance</h2>
